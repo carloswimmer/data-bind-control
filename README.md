@@ -1,6 +1,6 @@
 # data-bind-control
 
-> A Vue.js project
+A study project to improve the control of two-way data-bind on input cases.
 
 ## Build Setup
 
