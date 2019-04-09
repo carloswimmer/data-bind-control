@@ -5,11 +5,11 @@
       <h2>{{ person.name }}</h2>
       <h2>{{ person.email }}</h2>
     </div>
-    <input-pannel 
-      :someone='personOutput' 
+    <input-pannel
+      :someone='personOutput'
       @getPerson='edit'
       @cleanPerson='cancel'
-      @recordPerson='save' >
+      @recordPerson='save'>
     </input-pannel>
   </div>
 </template>
