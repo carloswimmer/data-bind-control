@@ -32,7 +32,8 @@ export default {
   name: 'OutputInput',
   props: {
     someone: {
-      type: Object
+      type: Object,
+      required: false
     }
   },
   methods: {

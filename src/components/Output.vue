@@ -17,6 +17,7 @@
 <script>
 import Person from '@/domain/Person'
 import InputPannel from '@/components/InputPannel'
+import PersonJson from '@/draft/person.json'
 
 export default {
   name: 'OutputInput',
@@ -40,10 +41,14 @@ export default {
     },
     cancel () {
       this.personOutput = new Person()
+    },
+    getPerson () {
+      this.person = JSON.parse(sessionStorage.getItem('person'))
+      if (this.person === null) this.person = PersonJson
     }
   },
   created () {
-    this.person = JSON.parse(sessionStorage.getItem('person'))
+    this.getPerson()
   }
 }
 </script>

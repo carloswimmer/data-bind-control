@@ -1,1 +1,4 @@
-{"name": "John Doe", "email": "jd@hotmail.com"}
+{
+  "name": "John Doe", 
+  "email": "jd@hotmail.com"
+}
