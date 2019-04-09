@@ -1,5 +1,6 @@
 <template>
   <div>
+    <header-date></header-date>
     <div class="container">
       <h1><font-awesome-icon icon="address-card" /></h1>
       <h2>{{ person.name }}</h2>
@@ -17,12 +18,13 @@
 <script>
 import Person from '@/domain/Person'
 import InputPannel from '@/components/InputPannel'
+import HeaderDate from '@/components/HeaderDate'
 import PersonJson from '@/draft/person.json'
 
 export default {
   name: 'OutputInput',
   components: {
-    InputPannel
+    InputPannel, HeaderDate
   },
   data () {
     return {
@@ -52,29 +54,3 @@ export default {
   }
 }
 </script>
-
-<style>
-h1, h2 {
-  font-weight: normal;
-}
-h2 {
-  color: #62667c;
-}
-.container {
-  border: 1px solid #cccccc;
-  border-radius: 6px;
-  padding: 20px;
-  margin-top: 50px;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.button-group {
-  padding-top: 20px;
-  display: flex;
-  justify-content: space-evenly;
-}
-</style>
