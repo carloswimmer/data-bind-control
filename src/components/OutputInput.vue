@@ -27,10 +27,14 @@
           <font-awesome-icon icon="edit" /> EDIT</button>
       </div>
     </div>
+      <button type="button" class=" btn btn-secondary" @click="withComponent">
+          <font-awesome-icon icon="star" /> USING COMPONENT</button>
   </div>
 </template>
 
 <script>
+import Person from '@/draft/person.json'
+
 export default {
   name: 'OutputInput',
   data () {
@@ -53,10 +57,13 @@ export default {
     },
     cancel () {
       this.personInput = {}
+    },
+    withComponent () {
+      this.$router.push({ name: 'Output' })
     }
   },
   created () {
-    this.person = JSON.parse(sessionStorage.getItem('person'))
+    this.person = Person
   }
 }
 </script>
@@ -72,10 +79,8 @@ h2 {
   border: 1px solid #cccccc;
   border-radius: 6px;
   padding: 20px;
-  margin-top: 50px;
+  margin: 50px auto 30px auto;
   max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
